@@ -63,7 +63,13 @@ export default function ImageGallery({ query }) {
         ))}
       </ul>
       {images.length > 0 && !isLoading && (
-        <button onClick={() => setPage(prevPage => prevPage + 1)}>
+        <button
+          className={styles.loadMoreButton}
+          onClick={() => {
+            setIsLoading(true);
+            setPage(prevPage => prevPage + 1);
+          }}
+        >
           Load More
         </button>
       )}
