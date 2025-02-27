@@ -1,13 +1,12 @@
 import React from 'react';
-import styles from './Loader.module.css';
-import BounceLoader from 'react-spinners/BounceLoader';
+import BeatLoader from 'react-spinners/BeatLoader';
 
 export default function Loader() {
   return (
-    <BounceLoader
+    <BeatLoader
       color="#58bde0"
-      size={150}
-      aria-label="Loading Spinner"
+      size={30}
+      aria-label="Beat Loader"
       data-testid="loader"
     />
   );
