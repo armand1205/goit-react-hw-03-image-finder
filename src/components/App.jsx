@@ -1,5 +1,4 @@
 import React from 'react';
-import Loader from './Loader/Loader';
 
 export const App = () => {
   return (
@@ -12,8 +11,6 @@ export const App = () => {
         fontSize: 40,
         color: '#010101',
       }}
-    >
-      <Loader />
-    </div>
+    ></div>
   );
 };
