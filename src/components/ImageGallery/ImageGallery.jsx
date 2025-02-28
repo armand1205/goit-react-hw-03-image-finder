@@ -58,15 +58,20 @@ export default function ImageGallery({ query }) {
       {isLoading && <Loader />} {/* Afișează Loader dacă se încarcă datele */}
       {error && <p>{error}</p>} {/* Afișează mesajul de eroare dacă există */}
       <ul className={styles.gallery}>
-        {images.map(image => (
-          <ImageGalleryItem key={image.id} image={image} />
+        {images.map((image, index) => (
+          <ImageGalleryItem
+            key={image.id}
+            images={images}
+            image={image}
+            index={index}
+          />
         ))}
       </ul>
       {images.length > 0 && !isLoading && (
         <button
           className={styles.loadMoreButton}
           onClick={() => {
-            setIsLoading(true);
+            setIsLoading(true); // Setează starea de încărcare la true când se face clic pe buton
             setPage(prevPage => prevPage + 1);
           }}
         >

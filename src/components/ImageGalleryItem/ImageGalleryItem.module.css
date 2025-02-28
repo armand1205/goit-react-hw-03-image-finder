@@ -13,4 +13,5 @@
   height: 260px;
   object-fit: cover;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
 }
